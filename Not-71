@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# تعریف رنج آی‌پی برای Primary Server
+primary_base_ip="192.168.10."
+primary_start=100
+
+# تعریف رنج آی‌پی برای Secondary Server
+secondary_base_ip="10.0.5."
+secondary_start=50
+
+# تعداد آی‌پی‌ها برای هر سرور
+ip_count=10
+
+echo "Primary server IPs:"
+for ((i=0; i<$ip_count; i++)); do
+  echo "$primary_base_ip$((primary_start + i))"
+done
+
+echo ""
+echo "Secondary server IPs:"
+for ((i=0; i<$ip_count; i++)); do
+  echo "$secondary_base_ip$((secondary_start + i))"
+done
